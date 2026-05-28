@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="A simple and user-friendly web application that generates click-to-chat links for WhatsApp, Telegram, and Signal without requiring users to save contact numbers first">
+  <meta name="author" content="BLZR">
+  <meta name="keywords" content="WhatsApp chat link, Telegram phone link, Signal link, click to chat, contactless chat, PWA">
+  <meta name="theme-color" content="#0741ad" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="dark light">
+  <link rel="canonical" href="https://click.blzr.sbs/">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://click.blzr.sbs/">
+  <meta property="og:title" content="ClickToChat">
+  <meta property="og:description" content="A simple and user-friendly web application that generates click-to-chat links for WhatsApp, Telegram, and Signal without requiring users to save contact numbers first">
+  <meta property="og:image" content="https://click.blzr.sbs/identity/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="ClickToChat preview showing a phone number input and WhatsApp, Telegram, and Signal options">
+  <meta property="og:site_name" content="ClickToChat">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ClickToChat">
+  <meta name="twitter:description" content="A simple and user-friendly web application that generates click-to-chat links for WhatsApp, Telegram, and Signal without requiring users to save contact numbers first">
+  <meta name="twitter:image" content="https://click.blzr.sbs/identity/og-image.png">
+  <meta name="twitter:image:alt" content="ClickToChat preview showing a phone number input and WhatsApp, Telegram, and Signal options">
+  <meta name="twitter:url" content="https://click.blzr.sbs/">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="identity/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="identity/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="identity/apple-touch-icon.png">
+  <meta name="msapplication-config" content="identity/browserconfig.xml">
+  <link rel="stylesheet" href="index.css">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://blzr.sbs/#organization",
+  "name": "BLZR",
+  "url": "https://blzr.sbs/",
+  "email": "contact@blzr.sbs",
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "contactType": "developer support",
+      "email": "contact@blzr.sbs",
+      "url": "https://github.com/1bl4z3r/click/issues",
+      "availableLanguage": ["en"]
+    }
+  ],
+  "sameAs": [
+    "https://github.com/1bl4z3r",
+    "https://x.com/BLZR_0"
+  ]
+}
+</script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "@id": "https://click.blzr.sbs/#webapplication",
+  "name": "ClickToChat",
+  "alternateName": "Click",
+  "url": "https://click.blzr.sbs/",
+  "description": "A simple and user-friendly web application that generates click-to-chat links for WhatsApp, Telegram, and Signal without requiring users to save contact numbers first",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "softwareVersion": "2026.05.20",
+  "browserRequirements": "Requires JavaScript and a modern web browser",
+  "isAccessibleForFree": true,
+  "inLanguage": "en",
+  "author": {
+    "@id": "https://blzr.sbs/#organization"
+  },
+  "creator": {
+    "@id": "https://blzr.sbs/#organization"
+  },
+  "publisher": {
+    "@id": "https://blzr.sbs/#organization"
+  },
+  "maintainer": {
+    "@id": "https://blzr.sbs/#organization"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "url": "https://click.blzr.sbs/"
+  },
+  "featureList": [
+    "Generate WhatsApp click-to-chat links",
+    "Generate Telegram click-to-chat links",
+    "Generate Signal click-to-chat links",
+    "Use without saving contact numbers",
+    "Offline-first Progressive Web App support",
+    "Country code selection",
+    "Clipboard paste support"
+  ],
+  "screenshot": "https://click.blzr.sbs/identity/og-image.png",
+  "image": "https://click.blzr.sbs/identity/og-image.png",
+  "sameAs": [
+    "https://github.com/1bl4z3r/click"
+  ]
+}
+</script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://click.blzr.sbs/#website",
+  "name": "ClickToChat",
+  "alternateName": "Click",
+  "url": "https://click.blzr.sbs/",
+  "description": "A simple and user-friendly web application that generates click-to-chat links for WhatsApp, Telegram, and Signal without requiring users to save contact numbers first",
+  "inLanguage": "en",
+  "publisher": {
+    "@id": "https://blzr.sbs/#organization"
+  },
+  "creator": {
+    "@id": "https://blzr.sbs/#organization"
+  },
+  "potentialAction": {
+    "@type": "UseAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://click.blzr.sbs/"
+    },
+    "name": "Generate a click-to-chat link"
+  }
+}
+</script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://click.blzr.sbs/#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I use this app?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Select your country code, enter your phone number, and click any service button."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use it offline?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. This PWA caches the app shell and CountryCodes.json for offline use. External chat links still depend on the target app or network availability."
+      }
+    }
+  ]
+}
+</script>
+
+  <title>ClickToChat - WhatsApp, Telegram & Signal Link Generator</title>
+</head>
+
+<body>
+
+  <div id="loader" role="status" aria-live="polite" aria-label="Loading country list"><div class="spinner" aria-hidden="true"></div><p>Loading country list…</p></div>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="./" aria-label="ClickToChat home">ClickToChat</a>
+      <button id="installAppBtn" class="install-btn" type="button" hidden aria-describedby="installHelp">Install App</button>
+      <p class="topbarp">Generate custom chat links for <span class="whatsapp">WhatsApp</span>, <span class="telegram">Telegram</span>, and <span class="signal">Signal</span> — all in a minimal PWA.</p>
+      <p id="installHelp" class="install-help">Install ClickToChat for faster access and offline loading.</p>
+    </div>
+  </header>
+
+  <div class="content-wrapper">
+    <main id="main" class="container">
+      <p id="connectionStatus" class="status-pill" role="status" aria-live="polite" hidden></p>
+      <noscript>
+        <section class="error" role="alert">
+          <h2>JavaScript required</h2>
+          <p>This app needs JavaScript to load country codes and generate chat links.</p>
+        </section>
+      </noscript>
+
+      <section class="card" aria-labelledby="form-heading">
+        <h2 id="form-heading">Create a chat link</h2>
+        <form id="chatForm" novalidate>
+          <div class="drop-text">
+            <div class="field drop">
+              <label for="dropdown">Country</label>
+              <select id="dropdown" name="country" autocomplete="country" required>
+                <option value="">Loading countries…</option>
+              </select>
+            </div>
+            <div class="field text-input-group">
+              <label for="phoneno">Phone number</label>
+              <div class="input-with-btn">
+                <input type="tel" id="phoneno" name="phone" inputmode="tel" autocomplete="tel" placeholder="91XXXXXXXXXX" aria-describedby="phone-help error-body" required>
+                <button id="pasteBtn" type="button" aria-label="Paste phone number from clipboard" title="Paste phone number">📋</button>
+              </div>
+              <p id="phone-help" class="help-text">Use digits only. Country code is selected automatically when possible.</p>
+            </div>
+          </div>
+
+          <section class="service-buttons" aria-label="Choose chat service">
+            <button id="whatsapp" class="btn service-btn whatsapp-btn" type="button" aria-label="Start WhatsApp chat">WhatsApp</button>
+            <button id="telegram" class="btn service-btn telegram-btn" type="button" aria-label="Start Telegram chat">Telegram</button>
+            <button id="signal" class="btn service-btn signal-btn" type="button" aria-label="Start Signal chat">Signal</button>
+          </section>
+        </form>
+      </section>
+
+      <section id="error" class="error hide" role="alert" aria-live="assertive" aria-atomic="true"><h2 id="error-h4"></h2><p id="error-body"></p></section>
+
+      <section class="faq" aria-labelledby="faq-heading">
+        <h2 id="faq-heading">FAQ</h2>
+        <details>
+          <summary>How do I use this app?</summary>
+          <p>Select your country code, enter your phone number, and click any service button.</p>
+        </details>
+        <details>
+          <summary>Can I use it offline?</summary>
+          <p>Yes. This PWA caches the app shell and CountryCodes.json for offline use. External chat links still depend
+            on the target app or network availability.</p>
+        </details>
+      </section>
+    </main>
+  </div>
+
+  <footer class="footer"><p>ClickToChat by <a href="https://blzr.sbs" rel="author">BLZR</a> | <a href="https://github.com/1bl4z3r/click/" rel="noopener noreferrer">Source</a></p></footer>
+  <script src="index.js" type="module"></script>
+</body>
+
+</html>

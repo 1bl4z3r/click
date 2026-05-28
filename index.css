@@ -1,0 +1,282 @@
+/* Material-inspired minimal theme */
+:root {
+  --primary: #0741ad;
+  --on-primary: #fff;
+  --bg: #121212;
+  --surface: #1e1e1e;
+  --on-surface: #e0e0e0;
+  --error: #b00020;
+  --spacing: 1rem;
+  --radius: 0.5rem;
+}
+
+/* Light theme overrides */
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #fafafa;
+    --surface: #fff;
+    --on-surface: #202020;
+  }
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+/* Existing body styles */
+body {
+  font-family: Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--on-surface);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /* Remove overflow-y: scroll if you added it, or ensure it's not here for now */
+  /* overflow-y: auto; or remove entirely if not needed */
+}
+
+/* Spinner styles */
+.spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3); /* Light grey border */
+  border-top: 4px solid var(--on-primary); /* Primary color for the top border */
+  border-radius: 50%; /* Make it a circle */
+  width: 40px; /* Size of the spinner */
+  height: 40px; /* Size of the spinner */
+  animation: spin 1s linear infinite; /* Apply the spin animation */
+  margin-bottom: 10px; /* Space between spinner and 'Loading...' text */
+}
+
+/* Keyframe animation for spinning */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Adjust loader to arrange spinner and text */
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg);
+  color: var(--on-surface);
+  display: flex;
+  flex-direction: column; /* Change to column to stack spinner and text */
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease-out;
+}
+
+#loader.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* New wrapper for consistent centering */
+.content-wrapper {
+  flex: 1; /* Allow it to grow in the flex column */
+  max-width: 600px; /* Set the maximum width here */
+  margin: auto; /* Center it */
+  padding: var(--spacing); /* Apply padding here to avoid inner shifts */
+  width: 100%; /* Ensure it takes full available width up to max-width */
+}
+
+/* Adjust .container */
+.container {
+  /* Remove flex: 1, max-width, and margin: auto from here */
+  /* They are now handled by .content-wrapper */
+  padding: 0; /* Remove padding here as it's on the wrapper */
+  width: 100%; /* Ensure it fills the wrapper */
+}
+.topbar {
+  background: var(--primary);
+  color: var(--on-primary);
+  text-align: center;
+  padding: var(--spacing);
+}
+.drop-text {
+  display: grid;
+  gap: var(--spacing);
+  margin: var(--spacing) 0;
+}
+.drop-text .input-with-btn {
+  display: flex;
+  width: 100%;
+}
+.input-with-btn input {
+  flex: 1;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.input-with-btn button {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  padding: 0 1rem;
+  margin: 0;
+}
+select, input {
+  width: 100%; padding: 0.75rem;
+  border: 1px solid var(--surface);
+  background: var(--surface);
+  color: var(--on-surface);
+}
+button, .btn {
+  cursor: pointer;
+  border: none;
+  padding: 0.75rem var(--spacing);
+  background: var(--primary);
+  color: var(--on-primary);
+  border-radius: var(--radius);
+  transition: opacity 0.2s;
+}
+button:hover {
+  opacity: 0.8;
+}
+.service-buttons {
+  display: flex;
+  gap: var(--spacing);
+  justify-content: center;
+  margin: var(--spacing) 0;
+}
+.service-btn {
+  flex: 1;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.faq details {
+  background: var(--surface);
+  border-radius: var(--radius);
+  margin-bottom: var(--spacing);
+}
+
+.faq summary {
+  list-style: none;       /* remove default marker */
+  cursor: pointer;
+  padding: var(--spacing);
+  position: relative;
+}
+
+.faq summary::after {
+  content: "▾";           /* down‑arrow */
+  position: absolute;
+  right: var(--spacing);
+  transition: transform 0.2s;
+}
+
+.faq details[open] summary::after {
+  transform: rotate(180deg);
+}
+
+.faq details p {
+  padding: 0 var(--spacing) var(--spacing);
+  color: var(--on-surface);
+}
+
+.error { color: var(--error); }
+.footer {
+  text-align: center; padding: var(--spacing);
+  background: var(--surface);
+  color: var(--on-surface);
+}
+
+/* Header/layout refinement based on visual review */
+.topbar {
+  text-align: left;
+  padding: clamp(1rem, 3vw, 1.4rem) max(1rem, env(safe-area-inset-right)) clamp(1rem, 3vw, 1.25rem) max(1rem, env(safe-area-inset-left));
+}
+.topbar-inner {
+  width: min(100%, 62rem);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas:
+    "brand install"
+    "tagline tagline"
+    "help help";
+  align-items: center;
+  gap: .45rem 1rem;
+}
+.brand {
+  grid-area: brand;
+  justify-self: start;
+  color: var(--on-primary);
+  font-size: clamp(1.7rem, 5vw, 2.7rem);
+  line-height: 1.05;
+  font-weight: 900;
+  letter-spacing: .01em;
+  text-decoration: none;
+}
+.brand:hover { text-decoration: none; }
+.topbar h1 { display: none; }
+.topbarp {
+  grid-area: tagline;
+  margin: .25rem 0 0;
+  max-width: none;
+  text-align: left;
+}
+.install-btn {
+  grid-area: install;
+  justify-self: end;
+  min-height: 2.45rem;
+  margin: 0;
+  padding: .55rem .9rem;
+  border-radius: .65rem;
+  white-space: nowrap;
+  font-size: .95rem;
+  box-shadow: none;
+  border: 2px solid rgb(255 255 255 / .55);
+  background: rgb(255 255 255 / .14);
+  color: #fff;
+}
+.install-btn[hidden] { display: none; }
+.install-help {
+  grid-area: help;
+  margin: 0;
+  max-width: 42rem;
+  text-align: left;
+  font-size: .86rem;
+  opacity: .88;
+}
+.status-pill {
+  margin: 0 0 1rem;
+  padding: .75rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--surface);
+  border-radius: var(--radius);
+  color: var(--on-surface);
+}
+.status-pill.online { opacity: .85; }
+.status-pill.offline { border-color: #ffbf47; }
+
+/* Cleaner form focus: accessible but less visually heavy than the yellow rectangle */
+:focus-visible { outline: none; }
+select:focus-visible,
+input:focus-visible {
+  border-color: color-mix(in srgb, var(--primary), white 22%);
+  box-shadow: 0 0 0 .16rem color-mix(in srgb, var(--primary), transparent 64%);
+}
+button:focus-visible,
+a:focus-visible,
+summary:focus-visible {
+  outline: .18rem solid color-mix(in srgb, #ffbf47, white 8%);
+  outline-offset: .18rem;
+}
+.input-with-btn:focus-within {
+  border-radius: var(--radius);
+  box-shadow: 0 0 0 .16rem color-mix(in srgb, var(--primary), transparent 64%);
+}
+.input-with-btn:focus-within input,
+.input-with-btn:focus-within button { box-shadow: none; }
+
+@media (max-width: 520px) {
+  .topbar-inner { grid-template-columns: 1fr auto; gap: .4rem .75rem; }
+  .brand { font-size: clamp(1.45rem, 8vw, 2rem); }
+  .install-btn { padding: .5rem .75rem; font-size: .88rem; min-height: 2.35rem; }
+}
+@media (max-width: 360px) {
+  .topbar-inner {
+    grid-template-columns: 1fr;
+    grid-template-areas: "brand" "install" "tagline" "help";
+  }
+  .install-btn { justify-self: start; }
+}

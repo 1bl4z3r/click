@@ -1,0 +1,80 @@
+{
+  "name": "ClickToChat",
+  "short_name": "Click",
+  "id": "./",
+  "description": "A simple and user-friendly web application that generates click-to-chat links for WhatsApp, Telegram, and Signal without requiring users to save contact numbers first",
+  "lang": "en-US",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0741ad",
+  "theme_color": "#0741ad",
+  "icons": [
+    {
+      "src": "identity/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "identity/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "identity/maskable-icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "New WhatsApp Chat",
+      "short_name": "WhatsApp",
+      "description": "Start a new chat on WhatsApp",
+      "url": "./?action=whatsapp",
+      "icons": [
+        {
+          "src": "identity/android-chrome-192x192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "New Telegram Chat",
+      "short_name": "Telegram",
+      "description": "Start a new chat on Telegram",
+      "url": "./?action=telegram",
+      "icons": [
+        {
+          "src": "identity/android-chrome-192x192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "New Signal Chat",
+      "short_name": "Signal",
+      "description": "Start a new chat on Signal",
+      "url": "./?action=signal",
+      "icons": [
+        {
+          "src": "identity/android-chrome-192x192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    }
+  ],
+  "categories": [
+    "productivity",
+    "social",
+    "utilities"
+  ],
+  "prefer_related_applications": false
+}
