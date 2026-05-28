@@ -1,6 +1,6 @@
-# ClickToChat
+# Click
 
-**ClickToChat** is a simple, fast, privacy-friendly, and offline-first Progressive Web App (PWA) that generates direct click-to-chat links for **WhatsApp**, **Telegram**, and **Signal** without requiring users to save phone numbers first.
+**Click** is a simple, fast, privacy-friendly, and offline-first Progressive Web App (PWA) that generates direct click-to-chat links for **WhatsApp**, **Telegram**, and **Signal** without requiring users to save phone numbers first.
 
 Use the app to quickly open a chat with any phone number by selecting a country code, entering the number, and choosing the preferred messaging service.
 
@@ -10,9 +10,9 @@ Use the app to quickly open a chat with any phone number by selecting a country 
 
 ## Table of Contents
 
-- [About ClickToChat](#about-clicktochat)
+- [About Click](#about-click)
 - [Key Features](#key-features)
-- [Why Use ClickToChat?](#why-use-clicktochat)
+- [Why Use Click?](#why-use-click)
 - [Supported Messaging Platforms](#supported-messaging-platforms)
 - [PWA and Offline Support](#pwa-and-offline-support)
 - [SEO, OpenGraph, and Schema-LD](#seo-opengraph-and-schema-ld)
@@ -30,13 +30,13 @@ Use the app to quickly open a chat with any phone number by selecting a country 
 
 
 
-## About ClickToChat
+## About Click
 
-ClickToChat is a lightweight utility web application designed to reduce friction when starting conversations on popular messaging platforms. Instead of saving a contact first, users can generate a direct chat link for WhatsApp, Telegram, or Signal.
+Click is a lightweight utility web application designed to reduce friction when starting conversations on popular messaging platforms. Instead of saving a contact first, users can generate a direct chat link for WhatsApp, Telegram, or Signal.
 
 The app is built with **vanilla HTML, CSS, and JavaScript**. It does not require frameworks, build tools, package managers, or third-party runtime dependencies.
 
-ClickToChat is ideal for:
+Click is ideal for:
 
 - quickly starting conversations with unsaved numbers;
 - testing messaging links across platforms;
@@ -69,11 +69,11 @@ ClickToChat is ideal for:
 
 
 
-## Why Use ClickToChat?
+## Why Use Click?
 
-ClickToChat helps users start conversations faster by removing the need to manually save contacts. The app focuses on speed, simplicity, and privacy-friendly usage.
+Click helps users start conversations faster by removing the need to manually save contacts. The app focuses on speed, simplicity, and privacy-friendly usage.
 
-Unlike heavier chat utility tools, ClickToChat:
+Unlike heavier chat utility tools, Click:
 
 - runs directly in the browser;
 - works without a backend server;
@@ -87,22 +87,22 @@ Unlike heavier chat utility tools, ClickToChat:
 
 ### WhatsApp
 
-ClickToChat generates WhatsApp-compatible links for starting direct conversations with a phone number.
+Click generates WhatsApp-compatible links for starting direct conversations with a phone number.
 
 ### Telegram
 
-ClickToChat generates Telegram phone links where supported by the user’s device and browser environment.
+Click generates Telegram phone links where supported by the user’s device and browser environment.
 
 ### Signal
 
-ClickToChat generates Signal-compatible phone links and attempts to open the native app where available.
+Click generates Signal-compatible phone links and attempts to open the native app where available.
 
 > External chat links may still require the target app to be installed or a working network connection, depending on the platform and device.
 
 
 ## PWA and Offline Support
 
-ClickToChat includes Progressive Web App support through:
+Click includes Progressive Web App support through:
 
 - `site.webmanifest`
 - `service-worker.js`
@@ -127,7 +127,7 @@ This allows the interface and country list to remain available after the first s
 
 ## SEO, OpenGraph, and Schema-LD
 
-ClickToChat is optimized for search engines and social sharing with:
+Click is optimized for search engines and social sharing with:
 
 - descriptive `<title>` and meta description;
 - canonical URL;
@@ -147,7 +147,7 @@ These structured data blocks help describe the app, publisher, developer contact
 
 ## Accessibility and Responsive Design
 
-ClickToChat is designed to work well across screen sizes and input methods.
+Click is designed to work well across screen sizes and input methods.
 
 Accessibility-focused improvements include:
 
@@ -340,7 +340,7 @@ Expected format:
 
 ## Browser Support
 
-ClickToChat works in modern browsers that support standard HTML, CSS, and JavaScript.
+Click works in modern browsers that support standard HTML, CSS, and JavaScript.
 
 PWA installation behavior varies by browser:
 
