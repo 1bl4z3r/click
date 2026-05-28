@@ -1,5 +1,5 @@
 {
-  "name": "ClickToChat",
+  "name": "Click",
   "short_name": "Click",
   "id": "./",
   "description": "A simple and user-friendly web application that generates click-to-chat links for WhatsApp, Telegram, and Signal without requiring users to save contact numbers first",

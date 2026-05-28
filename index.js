@@ -148,7 +148,7 @@ function updateInstallUi({ installed = false } = {}) {
   if (!elements.installButton) return;
   if (installed || isStandaloneMode()) {
     elements.installButton.hidden = true;
-    if (elements.installHelp) elements.installHelp.textContent = 'ClickToChat is installed and ready for offline use.';
+    if (elements.installHelp) elements.installHelp.textContent = 'Click is installed and ready for offline use.';
     return;
   }
   elements.installButton.hidden = !deferredInstallPrompt;
@@ -171,8 +171,8 @@ function setupInstallPrompt() {
     elements.installButton.hidden = true;
     if (elements.installHelp) {
       elements.installHelp.textContent = choice.outcome === 'accepted'
-        ? 'Install started. You can launch ClickToChat from your app list.'
-        : 'Install dismissed. You can still use ClickToChat in the browser.';
+        ? 'Install started. You can launch Click from your app list.'
+        : 'Install dismissed. You can still use Click in the browser.';
     }
   });
   window.addEventListener('appinstalled', () => {
