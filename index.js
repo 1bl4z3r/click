@@ -221,24 +221,28 @@ function hideLoader() {
   elements.loader.addEventListener('transitionend', () => elements.loader.remove(), { once: true });
 }
 
-function registerServiceWorker() {
-  if (!('serviceWorker' in navigator)) return;
-  window.addEventListener('load', async () => {
-    try {
-      const registration = await navigator.serviceWorker.register('./service-worker.js');
-      console.info('Service worker registered:', registration.scope);
-    } catch (error) {
-      console.warn('Service worker registration failed:', error);
-    }
-  });
-}
-
 window.addEventListener('DOMContentLoaded', async () => {
   try {
     setupEvents();
     setupInstallPrompt();
     updateConnectionStatus();
     await loadCountries();
+
+    // Web Share Target API payload handling
+    const urlParams = new URLSearchParams(window.location.search);
+    const sharedText = urlParams.get('text') || urlParams.get('url') || '';
+    
+    if (sharedText) {
+      const extractedDigits = digitsOnly(sharedText);
+      if (extractedDigits) {
+        if (elements.phone) elements.phone.value = extractedDigits;
+        findCountryFromNumber(sharedText);
+        
+        // Clear the query parameters from the address bar for a cleaner state
+        window.history.replaceState({}, document.title, window.location.pathname);
+      }
+    }
+
   } catch (error) {
     console.error('App initialization failed:', error);
     showError('APP INITIALIZATION FAILED', 'The app could not initialize completely. Please refresh the page.');
@@ -246,5 +250,3 @@ window.addEventListener('DOMContentLoaded', async () => {
     hideLoader();
   }
 });
-
-registerServiceWorker();

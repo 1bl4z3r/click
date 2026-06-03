@@ -4,9 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="description" content="A simple and user-friendly web application that generates click-to-chat links for WhatsApp, Telegram, and Signal without requiring users to save contact numbers first">
+  <meta name="description"
+    content="A simple and user-friendly web application that generates click-to-chat links for WhatsApp, Telegram, and Signal without requiring users to save contact numbers first">
   <meta name="author" content="BLZR">
-  <meta name="keywords" content="WhatsApp chat link, Telegram phone link, Signal link, click to chat, contactless chat, PWA">
+  <meta name="keywords"
+    content="WhatsApp chat link, Telegram phone link, Signal link, click to chat, contactless chat, PWA">
   <meta name="theme-color" content="#0741ad" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
   <meta name="color-scheme" content="dark light">
@@ -16,23 +18,27 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://click.blzr.sbs/">
   <meta property="og:title" content="Click">
-  <meta property="og:description" content="A simple and user-friendly web application that generates click-to-chat links for WhatsApp, Telegram, and Signal without requiring users to save contact numbers first">
+  <meta property="og:description"
+    content="A simple and user-friendly web application that generates click-to-chat links for WhatsApp, Telegram, and Signal without requiring users to save contact numbers first">
   <meta property="og:image" content="https://click.blzr.sbs/identity/og-image.png">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Click preview showing a phone number input and WhatsApp, Telegram, and Signal options">
+  <meta property="og:image:alt"
+    content="Click preview showing a phone number input and WhatsApp, Telegram, and Signal options">
   <meta property="og:site_name" content="Click">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Click">
-  <meta name="twitter:description" content="A simple and user-friendly web application that generates click-to-chat links for WhatsApp, Telegram, and Signal without requiring users to save contact numbers first">
+  <meta name="twitter:description"
+    content="A simple and user-friendly web application that generates click-to-chat links for WhatsApp, Telegram, and Signal without requiring users to save contact numbers first">
   <meta name="twitter:image" content="https://click.blzr.sbs/identity/og-image.png">
-  <meta name="twitter:image:alt" content="Click preview showing a phone number input and WhatsApp, Telegram, and Signal options">
+  <meta name="twitter:image:alt"
+    content="Click preview showing a phone number input and WhatsApp, Telegram, and Signal options">
   <meta name="twitter:url" content="https://click.blzr.sbs/">
 
   <link rel="manifest" href="site.webmanifest">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/svg+xml" href="identity/favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="identity/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="identity/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="identity/apple-touch-icon.png">
@@ -172,12 +178,17 @@
 
 <body>
 
-  <div id="loader" role="status" aria-live="polite" aria-label="Loading country list"><div class="spinner" aria-hidden="true"></div><p>Loading country list…</p></div>
+  <div id="loader" role="status" aria-live="polite" aria-label="Loading country list">
+    <div class="spinner" aria-hidden="true"></div>
+    <p>Loading country list…</p>
+  </div>
   <header class="topbar">
     <div class="topbar-inner">
       <a class="brand" href="./" aria-label="Click home">Click</a>
-      <button id="installAppBtn" class="install-btn" type="button" hidden aria-describedby="installHelp">Install App</button>
-      <p class="topbarp">Generate custom chat links for <span class="whatsapp">WhatsApp</span>, <span class="telegram">Telegram</span>, and <span class="signal">Signal</span> — all in a minimal PWA.</p>
+      <button id="installAppBtn" class="install-btn" type="button" hidden aria-describedby="installHelp">Install
+        App</button>
+      <p class="topbarp">Generate custom chat links for <span class="whatsapp">WhatsApp</span>, <span
+          class="telegram">Telegram</span>, and <span class="signal">Signal</span> — all in a minimal PWA.</p>
       <p id="installHelp" class="install-help">Install Click for faster access and offline loading.</p>
     </div>
   </header>
@@ -205,22 +216,31 @@
             <div class="field text-input-group">
               <label for="phoneno">Phone number</label>
               <div class="input-with-btn">
-                <input type="tel" id="phoneno" name="phone" inputmode="tel" autocomplete="tel" placeholder="91XXXXXXXXXX" aria-describedby="phone-help error-body" required>
-                <button id="pasteBtn" type="button" aria-label="Paste phone number from clipboard" title="Paste phone number">📋</button>
+                <input type="tel" id="phoneno" name="phone" inputmode="tel" autocomplete="tel"
+                  placeholder="91XXXXXXXXXX" aria-describedby="phone-help error-body" required>
+                <button id="pasteBtn" type="button" aria-label="Paste phone number from clipboard"
+                  title="Paste phone number">📋</button>
               </div>
-              <p id="phone-help" class="help-text">Use digits only. Country code is selected automatically when possible.</p>
+              <p id="phone-help" class="help-text">Use digits only. Country code is selected automatically when
+                possible.</p>
             </div>
           </div>
 
           <section class="service-buttons" aria-label="Choose chat service">
-            <button id="whatsapp" class="btn service-btn whatsapp-btn" type="button" aria-label="Start WhatsApp chat">WhatsApp</button>
-            <button id="telegram" class="btn service-btn telegram-btn" type="button" aria-label="Start Telegram chat">Telegram</button>
-            <button id="signal" class="btn service-btn signal-btn" type="button" aria-label="Start Signal chat">Signal</button>
+            <button id="whatsapp" class="btn service-btn whatsapp-btn" type="button"
+              aria-label="Start WhatsApp chat">WhatsApp</button>
+            <button id="telegram" class="btn service-btn telegram-btn" type="button"
+              aria-label="Start Telegram chat">Telegram</button>
+            <button id="signal" class="btn service-btn signal-btn" type="button"
+              aria-label="Start Signal chat">Signal</button>
           </section>
         </form>
       </section>
 
-      <section id="error" class="error hide" role="alert" aria-live="assertive" aria-atomic="true"><h2 id="error-h4"></h2><p id="error-body"></p></section>
+      <section id="error" class="error hide" role="alert" aria-live="assertive" aria-atomic="true">
+        <h2 id="error-h4"></h2>
+        <p id="error-body"></p>
+      </section>
 
       <section class="faq" aria-labelledby="faq-heading">
         <h2 id="faq-heading">FAQ</h2>
@@ -237,8 +257,19 @@
     </main>
   </div>
 
-  <footer class="footer"><p>Click by <a href="https://blzr.sbs" rel="author">BLZR</a> | <a href="https://github.com/1bl4z3r/click/" rel="noopener noreferrer">Source</a></p></footer>
+  <footer class="footer">
+    <p>Click by <a href="https://blzr.sbs" rel="author">BLZR</a> | <a href="https://github.com/1bl4z3r/click/" rel="noopener noreferrer">Source</a></p>
+  </footer>
   <script src="index.js" type="module"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./service-worker.js')
+          .then(registration => console.info('Service worker registered:', registration.scope))
+          .catch(error => console.warn('Service worker registration failed:', error));
+      });
+    }
+  </script>
 </body>
 
 </html>
